@@ -188,7 +188,7 @@ def compareauthors(authorname1, author):
 
 
 def compareratings(book1, book2):
-    return (float(book1['average_rating']) > float(book2['average_rating']))
+    return (float(book1['average_rating']) < float(book2['average_rating']))
 
 
 def comparetagnames(name, tag):
@@ -202,7 +202,10 @@ def sortBooks(catalog, size):
     sub_list = sub_list.copy()
     start_time = time.process_time()
     sorted_list = sa.sort(sub_list, compareratings)
+<<<<<<< HEAD
     sa.sort(sub_list, compareratings)
+=======
+>>>>>>> 851172aaef4a996c149d8e687f50774383b0034f
     stop_time = time.process_time()
     elapsed_time_mseg = (stop_time - start_time)*1000
     return elapsed_time_mseg, sorted_list
